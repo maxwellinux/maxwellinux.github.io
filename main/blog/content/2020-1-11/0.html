@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+	<div id="wrapper">
+	<div id="main">
+	<div class="inner">
+	<header id="header">
+        <span>
+            <a class="icon fa-paper-plane" href="../../../../index.html">&nbsp;&nbsp;HOMEPAGE</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="icon solid fa-pen-nib" href="../../index.html">&nbsp;&nbsp;BLOG</a>
+        </span>
+	</header>
+
+    <section>
+    	<header class="main">
+    		<h2>How to use Pacman to manage packages on Arch-based Linux</h2>
+    	</header>
+	<h3 id="content">Contents:</h3>
+    <h3><a href="#1">** What is the Pacman</a></h3>
+    <h3><a href="#2">** What we often do with Pacman</a></h3>
+    <h4><a href="#2.1">1. upgrade</a></h4>
+    <h4><a href="#2.2">2. install</a></h4>
+    <h4><a href="#2.3">3. uninstall</a></h4>
+    <h4><a href="#2.4">4. list</a></h4>
+    <h4><a href="#2.5">5. clean</a></h4>
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#9fa3a6 SIZE=5/>
+
+    <h2><a name="1">** What is the Pacman</a></h2>
+    <p><b>Pacman is the package manager of Arch linux. It combines a simple binary package format with an easy-to-use build system. The goal of pacman is to make it possible to easily manage packages, whether they are from the official repositories or the user's own builds. Pacman is written in the C programming language and uses the tar format for packaging.</b></p>
+
+    <h2><a name="2">** What we often do with Pacman</a></h2>
+
+    <h3><a name="2.1">1. upgrade</a></h3>
+    <p><b>Pacman can update all packages on the system with just one command. The following command synchronizes the repository databases and updates the system's packages</b></p>
+    <pre><code>sudo pacman -Syu</code></pre>
+    <pre><code>sudo pacman -Syyu</code></pre>
+    <p><b>The option -y means to download fresh package databases from the server</b></p>
+    <p><b>The option -yy means to force to download fresh package databases from the server</b></p>
+    <p><b>The option -u means to upgrade all installed packages</b></p>
+
+    <h3><a name="2.2">2. install</a></h3>
+    <p><b>Install packages:</b></p>
+    <pre><code>sudo pacman -S [packages]</code></pre>
+
+    <h3><a name="2.3">3. remove</a></h3>
+    <p><b>Remove packages:</b></p>
+    <pre><code>sudo pacman -Rns [packages]</code></pre>
+    <p><b>The option -n means to remove a package and its dependencies which are not required by any other installed package</b></p>
+    <p><b>The option -s means to stop creating backup files when removing packages</b></p>
+
+    <h3><a name="2.4">4. list</a></h3>
+    <p><b>List all packages installed:</b></p>
+    <pre><code>sudo pacman -Q</code></pre>
+    <p><b>List all packages no longer required as dependencies in a quiet way:</b></p>
+    <pre><code>sudo pacman -Qdtq</code></pre>
+    <p><b>And remove these useless packages:</b></p>
+    <pre><code>sudo pacman -Rns $(pacman -Qdtq)</code></pre>
+
+    <h3><a name="2.5">5. clean</a></h3>
+    <p><b>Pacman stores its downloaded packages in /var/cache/pacman/pkg/ and does not remove the old or uninstalled versions automatically. So it is necessary to deliberately clean up the cache periodically to prevent the directory to grow indefinitely in size.</b></p>
+    <pre><code>sudo paccache -r</code></pre>
+
+    <footer id="footer">
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#9fa3a6 SIZE=10/>
+        <a href="#" target="_self"><h3><u>BACK-TO-TOP</u></h3></a>
+    </footer>
+	</div>
+	</div>
+	</div>
+	</body>
+</html>

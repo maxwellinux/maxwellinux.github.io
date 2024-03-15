@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <style>
+        .tablex {border-collapse: collapse;}
+        .tablex tr {}
+        .tablex tr td {text-align:center; line-height:30px; width:300px;}
+        .tablex tr td:hover { background-color:grey;}
+        </style>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../../assets/css/main.css" />
+    </head>
+	<body class="is-preload">
+	<div id="wrapper">
+    <div id="TopAnchor"></div>
+
+	<!-- -->
+	<!-- Main-->
+	<!-- -->
+	<div id="main">
+	<div class="inner">
+	<header id="header">
+        <span>
+            <a class="icon solid fa-paper-plane" href="../../../../index.html">&nbsp;&nbsp;HOMEPAGE</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="icon solid fa-language" href="../../index.html">&nbsp;&nbsp;LANGUAGE</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="icon solid fa-language" href="../index.html">&nbsp;&nbsp;ENGLISH</a>
+        </span>
+	</header><br>
+
+
+
+    <h1>>> Collocation</h1>
+    <p>Collocations stored in the database: <font id="count" color="red"></font></p>
+    <b>Class:</b><br>
+    <p style="line-height:50px">
+    <button id="button" onclick="ShowLabel(list,'0')">ALL</button>
+    <button id="button" onclick="ShowLabel(list_1,'1')">1</button>
+    <button id="button" onclick="ShowLabel(list_2,'10')">10</button>
+    <button id="button" onclick="ShowLabel(list_3,'2')">2</button>
+    <button id="button" onclick="ShowLabel(list_4,'20')">20</button></p>
+    <b>Page:</b><br>
+    <p align="center"><b><font color="brown"><i id="number"></i> items for each page</font></b></p>
+    <p id="index_button" style="line-height:50px"></p>
+
+    <b>Content:</b><br>
+    <table class="tablex" border="1" cellspacing="0" cellpadding="20" align="center" id="outlet_table"></table>
+
+    <footer id="footer">
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#9fa3a6 SIZE=10/>
+        <p><a class="icon solid fa-angle-double-up" href="#TopAnchor">&nbsp;&nbsp;BACK TO TOP</a></p>
+    </footer>
+	</div>
+    </div>
+
+	<!-- -->
+	<!-- Sidebar-->
+	<!-- -->
+    <div id="sidebar">
+	<div class="inner">
+
+    <section>
+        <b>Look up the collocations with the ID or keywords:</b><br><br>
+        <input type="text" id="lookup" style="width:100%"></input><br>
+        <button id="button" onclick="LookUp(list)" style="float: left;">LOOKUP</button>
+        <button id="button" onclick="Clear()" style="float: right;">CLEAR</button><br><br><br>
+        <i id="result_ring">>> Waiting...</i><br>
+        <table class="tablex" border="1" cellspacing="0" cellpadding="20" align="center" id="result"></table>
+    </section>
+
+
+
+    <section>
+        <p><a class="icon solid fa-angle-double-up" href="#TopAnchor">&nbsp;&nbsp;BACK TO TOP</a></p>
+    </section>
+
+    <section>
+        <b>Write down the bugs below:</b><br><br>
+        <textarea style="width:30%"></textarea>
+        <script src="assets/autosize.js"></script>
+        <script>autosize(document.querySelectorAll('textarea'))</script>
+    </section>
+
+	</div>
+    </div>
+	</div>
+    </body>
+</html>
+<script src="assets/table.js"></script>
+<script src="assets/lookup.js"></script>
+<script src="list.js" charset="utf-8"></script>
+<script src="assets/main.js"></script>
+<script src="assets/sublist.js"></script>
+<script src="assets/index.js"></script>
+<script src="assets/label.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>

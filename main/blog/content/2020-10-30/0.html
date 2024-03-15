@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <title>How to configure an overpowered manjaro linux</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+	<div id="wrapper">
+	<div id="main">
+	<div class="inner">
+	<header id="header">
+        <span>
+            <a class="icon fa-paper-plane" href="../../../../index.html">&nbsp;&nbsp;HOMEPAGE</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="icon solid fa-pen-nib" href="../../index.html">&nbsp;&nbsp;BLOG</a>
+        </span>
+	</header>
+
+    <section>
+    	<header class="main">
+    		<h2>How to configure an overpowered manjaro linux</h2>
+    	</header>
+	<h3 id="content">Contents:</h3>
+    <h3><a href="#1">** Preface</a></h3>
+    <h3><a href="#2">** Recommended Applications</a></h3>
+    <h4><a href="#2.1">1. shell</a></h4>
+    <h4><a href="#2.2">2. terminal</a></h4>
+    <h4><a href="#2.3">3. text</a></h4>
+    <h4><a href="#2.4">4. internet</a></h4>
+    <h4><a href="#2.5">5. gaming</a></h4>
+    <h4><a href="#2.6">6. media</a></h4>
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#9fa3a6 SIZE=5/>
+
+    <h2><a name="1">** Preface</a></h2>
+    <p><b>According to <a href="../2020-10-29/0.html">How to install manjaro linux</a>, we can install the manjaro linux successfully. Then, in order to enhance the functionality of the manjaro linux, here are some of my recommended applications.</b></p>
+
+    <h2><a name="2">** Recommended Applications</a></h2>
+
+    <h3><a name="2.1">1. shell</a></h3>
+    <h4><font color="red">bash</font></h4>
+    <p><b>Install bash by pacman:</b></p>
+    <pre><code>sudo pacman -S bash</code></pre>
+    <p><b>Enter the dir <i>.config</i> and download the configuration from <a href="https://github.com/ethanix/bash">git@github.com:ethanix/bash.git</a> by git clone:</b></p>
+    <pre><code>cd .config<br>git clone git@github.com:ethanix/bash.git</code></pre>
+    <p><b>Create the soft link to <i>.bashrc</i>:</b></p>
+    <pre><code>ln -sf ~/.config/bash/bashrc/.bashrc ~/.bashrc</code></pre>
+    <p><b>Look through <i>.bashrc</i> for more detailed configurations.</b></p>
+
+    <h3><a name="2.2">2. terminal</a></h3>
+    <h4><font color="red">st</font></h4>
+    <p><b>Enter the dir <i>.config</i> and download the configuration from <a href="https://github.com/ethanix/st">git@github.com:ethanix/st.git</a> by git clone:</b></p>
+    <pre><code>cd .config<br>git clone git@github.com:ethanix/st.git</code></pre>
+    <p><b>Install the dependencies by pacman:</b></p>
+    <pre><code>sudo pacman -S make<br>sudo pacman -S pkg-config<br>sudo pacman -S ttf-sourcecodepro-nerd</code></pre>
+    <p><b>Enter the dir <i>st</i> and install st by make:</b></p>
+    <pre><code>sudo make clean install</code></pre>
+    <p><b>Look through <i>config.h</i> for more detailed configurations.</b></p>
+
+    <h3><a name="2.3">3. text</a></h3>
+    <h4><font color="red">vim</font></h4>
+    <p><b>Install vim by pacman:</b></p>
+    <pre><code>sudo pacman -S vim</code></pre>
+    <p><b>Download the configuration from <a href="https://github.com/ethanix/.vim">git@github.com:ethanix/.vim.git</a> by git clone:</b></p>
+    <pre><code>git clone git@github.com:ethanix/.vim.git</code></pre>
+    <p><b>Install the dependencies by pacman:</b></p>
+    <pre><code>sudo pacman -S xclip</code></pre>
+    <p><b>Look through <i>vimrc</i> for more detailed configurations.</b></p>
+
+    <h4><font color="red">neovim</font></h4>
+    <p><b>Install neovim by pacman:</b></p>
+    <pre><code>sudo pacman -S neovim</code></pre>
+    <p><b>Enter the dir <i>.config</i> and download the configuration from <a href="https://github.com/ethanix/nvim">git@github.com:ethanix/nvim.git</a> by git clone:</b></p>
+    <pre><code>cd .config<br>git clone git@github.com:ethanix/nvim.git</code></pre>
+    <p><b>Look through <i>init.vim</i> for more detailed configurations.</b></p>
+
+    <h4><font color="red">tesseract</font></h4>
+    <p><b>Install tesseract by pacman:</b></p>
+    <pre><code>sudo pacman -S tesseract</code></pre>
+    <p><b>Install language packages by pacman, for example:</b></p>
+    <pre><code>sudo pacman -S tesseract-data-eng</code></pre>
+    <p><b>Browse <a href="https://archlinux.org/packages/?sort=&q=tesseract&maintainer=&flagged=">ArchWiki Packages</a> for more information of language packages and <a href="https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html#simplest-invocation-to-ocr-an-image">Tesseract documentation</a> to know more about usage.</b></p>
+
+    <h3><a name="2.4">4. internet</a></h3>
+    <h4><font color="red">qBittorrent</font></h4>
+    <p><b>Warning: Beacuse of using of P2P and copyright affairs or something like that, Use a VPN to make sure you hide your IP address successfully.</b></p>
+    <p><b>Install qbittorrent by pacman:</b></p>
+    <pre><code>sudo pacman -S qbittorrent</code></pre>
+    <p><b>Without anything else to do, just enjoy it.</b></p>
+
+    <h3><a name="2.5">5. gaming</a></h3>
+    <h4><font color="red">fceux</font></h4>
+    <p><b>Install fceux by pacman:</b></p>
+    <pre><code>sudo pacman -S fceux</code></pre>
+
+    <h3><a name="2.6">6. media</a></h3>
+    <h4><font color="red">ffmpeg</font></h4>
+    <p><b>Install ffmpeg by pacman:</b></p>
+    <pre><code>sudo pacman -S ffmpeg</code></pre>
+
+    <h4><font color="red">mpv</font></h4>
+    <p><b>Install mpv by pacman:</b></p>
+    <pre><code>sudo pacman -S mpv</code></pre>
+
+    <h4><font color="red">gimp</font></h4>
+    <p><b>Install gimp by pacman:</b></p>
+    <pre><code>sudo pacman -S gimp</code></pre>
+
+    <footer id="footer">
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#9fa3a6 SIZE=10/>
+        <a href="#" target="_self"><h3><u>BACK-TO-TOP</u></h3></a>
+    </footer>
+	</div>
+	</div>
+	</div>
+	</body>
+</html>

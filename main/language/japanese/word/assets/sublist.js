@@ -39,10 +39,10 @@ function SmashList(list_input,label){
             list_9.push(list_input[i]);
         }
         else if(list_input[i][4] == label_list[9]){
-            list_9.push(list_input[i]);
+            list_10.push(list_input[i]);
         }
         else if(list_input[i][4] == label_list[10]){
-            list_9.push(list_input[i]);
+            list_11.push(list_input[i]);
         }
     }
     if( label == label_list[0]){

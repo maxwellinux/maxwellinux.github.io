@@ -2,9 +2,14 @@ function TabulateList(list_input){
     let head = "<tr><td><font color='olive'>ID</font></td><td><font color='maron'>辞書</font></td><td><font color='brown'>日常</font></td><td><font color='maroon'>発音</font></td><td><font color='olive'>分類</font></td></tr>"
     let output = head;
     for (var i=0;i<list_input.length;i++){
-        if (list_input[i][2].length > 3 && list_input[i][4] == "10"){
-            link = "<a href='https://www.weblio.jp/content/" + list_input[i][2].slice(0,-2) + "'>" + list_input[i][2] + "</a>"
-        }
+        if (list_input[i][4] == "2" || list_input[i][4] == "21" || list_input[i][4] == "22"){
+			if (list_input[i][2].length > 3){
+				link = "<a href='https://www.weblio.jp/content/" + list_input[i][2].slice(0,-2) + "'>" + list_input[i][2] + "</a>"
+			}
+			else{
+				link = "<a href='https://www.weblio.jp/content/"+ list_input[i][2] + "'>" + list_input[i][2] + "</a>"		
+			}
+		}
         else{
             link = "<a href='https://www.weblio.jp/content/"+ list_input[i][2] + "'>" + list_input[i][2] + "</a>"
         }

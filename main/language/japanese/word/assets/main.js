@@ -1,4 +1,4 @@
-let label_list = ["1","10","11","12","2","3","4","5","6"];
+let label_list = ["1","11","12","2","21","22","3","4","5","6","7"];
 let number = 300;
 document.getElementById("number").innerHTML = number;
 document.getElementById("count").innerHTML = list.length;
